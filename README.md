@@ -1,17 +1,20 @@
-# Mas-bandwidth Tap
+# Más Bandwidth Homebrew Tap
 
-## How do I install these formulae?
+Homebrew formulae for [Más Bandwidth](https://github.com/mas-bandwidth) open source libraries.
 
-`brew install mas-bandwidth/tap/<formula>`
+## Install
 
-Or `brew tap mas-bandwidth/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "mas-bandwidth/tap"
-brew "<formula>"
 ```
+brew tap mas-bandwidth/tap
+brew trust mas-bandwidth/tap      # one time, Homebrew 6 and newer
+brew install serialize
+```
+
+## Formulae
+
+| Formula | Description |
+| --- | --- |
+| `serialize` | Single-header bitpacking serializer for C++ aimed at game networking |
 
 ## Documentation
 
