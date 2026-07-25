@@ -1,21 +1,33 @@
-# Más Bandwidth Homebrew Tap
+# Más Bandwidth Homebrew Tap — retired
 
-Homebrew formulae for [Más Bandwidth](https://github.com/mas-bandwidth) open source libraries.
+**This tap is retired. You do not need it.** Every Más Bandwidth library is now
+in `homebrew/core`, so install them directly:
 
-## Install
-
-```
-brew tap mas-bandwidth/tap
-brew trust mas-bandwidth/tap      # one time, Homebrew 6 and newer
+```sh
 brew install serialize
+brew install netcode
+brew install reliable
+brew install libyojimbo
 ```
 
-## Formulae
+Note that yojimbo's formula is named `libyojimbo`, not `yojimbo` — the shorter
+name was already taken by an unrelated cask.
 
-| Formula | Description |
-| --- | --- |
-| `serialize` | Single-header bitpacking serializer for C++ aimed at game networking |
+## If you tapped this repo
 
-## Documentation
+Nothing to do. `tap_migrations.json` redirects `serialize` to `homebrew/core`, so
+an existing `brew install mas-bandwidth/tap/serialize` resolves to the core
+formula. You can untap at your leisure:
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+```sh
+brew untap mas-bandwidth/tap
+```
+
+## Why it existed
+
+This tap was a temporary distribution channel, used to test tap-based delivery
+while the formulae were going through submission to `homebrew/core`. All four
+libraries were accepted on 2026-07-18, which made the tap redundant — and worse
+than redundant, since a second copy of a formula has to be updated by hand and
+silently drifts from the one in core. The formulae in `homebrew/core` are kept
+current automatically by Homebrew's own autobump.
