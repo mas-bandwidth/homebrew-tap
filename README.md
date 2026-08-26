@@ -1,9 +1,23 @@
-# Más Bandwidth Homebrew Tap — retired
+# Más Bandwidth Homebrew Tap
 
-If these libraries help you, please support them: **[Become a supporter](https://www.patreon.com/MasBandwidth/membership)**
+If these projects help you, please support them: **[Become a supporter](https://www.patreon.com/MasBandwidth/membership)**
 
-**This tap is retired. You do not need it.** Every Más Bandwidth library is now
-in `homebrew/core`, so install them directly:
+This tap carries the [schema](https://github.com/mas-bandwidth/schema)
+compiler — write your data types once, generate the code that reads and
+writes them in C, C++, C#, Go, Rust and JavaScript:
+
+```sh
+brew install mas-bandwidth/tap/schema
+```
+
+The formula builds from the upstream release tarball. License: AGPL-3.0-or-later
+(the compiler; the code it generates is yours — see the LICENSE exception
+upstream).
+
+## The C libraries are in homebrew/core
+
+Every Más Bandwidth C/C++ library is in `homebrew/core`, so install them
+directly — no tap needed:
 
 ```sh
 brew install serialize
@@ -15,21 +29,16 @@ brew install libyojimbo
 Note that yojimbo's formula is named `libyojimbo`, not `yojimbo` — the shorter
 name was already taken by an unrelated cask.
 
-## If you tapped this repo
+### If you tapped this repo for the libraries
 
 Nothing to do. `tap_migrations.json` redirects `serialize` to `homebrew/core`, so
 an existing `brew install mas-bandwidth/tap/serialize` resolves to the core
-formula. You can untap at your leisure:
+formula.
 
-```sh
-brew untap mas-bandwidth/tap
-```
+### Why the libraries moved and schema lives here
 
-## Why it existed
-
-This tap was a temporary distribution channel, used to test tap-based delivery
-while the formulae were going through submission to `homebrew/core`. All four
-libraries were accepted on 2026-07-18, which made the tap redundant — and worse
-than redundant, since a second copy of a formula has to be updated by hand and
-silently drifts from the one in core. The formulae in `homebrew/core` are kept
-current automatically by Homebrew's own autobump.
+The tap started as a temporary distribution channel while the four library
+formulae went through submission to `homebrew/core`; all four were accepted on
+2026-07-18 and are kept current automatically by Homebrew's own autobump, so
+the tap copies were removed rather than drift. `schema` is distributed from
+this tap.
