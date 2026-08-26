@@ -1,5 +1,7 @@
 # Más Bandwidth Homebrew Tap — retired
 
+If these libraries help you, please support them: **[Become a supporter](https://www.patreon.com/MasBandwidth/membership)**
+
 **This tap is retired. You do not need it.** Every Más Bandwidth library is now
 in `homebrew/core`, so install them directly:
 
