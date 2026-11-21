@@ -11,7 +11,7 @@ class Schema < Formula
   def install
     # Stamp the version the binary reports: upstream's Makefile stamps from
     # `git describe`, which a release tarball cannot provide.
-    ldflags = "-s -w -X github.com/mas-bandwidth/schema/v2/internal/version.version=v#{version}"
+    ldflags = "-X github.com/mas-bandwidth/schema/v2/internal/version.version=v#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/schema"
   end
 
