@@ -3,8 +3,9 @@
 If these projects help you, please support them: **[Become a supporter](https://www.patreon.com/MasBandwidth/membership)**
 
 This tap carries the [schema](https://github.com/mas-bandwidth/schema)
-compiler — write your data types once, generate the code that reads and
-writes them in C, C++, C#, Go, Rust and JavaScript:
+compiler — write your data types once, generate bit-packed code that reads
+and writes them in C, C++, C# (modern), C# (unity), Dart, Elixir, Go, Goose,
+Java, JavaScript, Lobster, Lua, Luau, Python, Ruby, Rust and Squirrel:
 
 ```sh
 brew install mas-bandwidth/tap/schema
